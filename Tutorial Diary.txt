@@ -1,0 +1,75 @@
+Day - 1: Git 
+On the first Day I forgot to save the original diary
+>Basic Introduction
+>Basic Tutorial to Web Devleopment Terms
+
+>Git Tutorial
+    >how git is great (and I know that :>)
+    >basic git commands
+        >pull down remote repository
+            >git clone "url"
+        >workflow commands
+            >git add "file name.ext"
+            >git commit -m "commitement message"
+        >status commands
+            >git status
+            >git log
+    >git command layout
+        program | action | destination
+>Git Tutorial on https://www.youtube.com/watch?v=HVsySz-h9r4
+    >distributed vs. central control systems (git is VCS)
+    >git help command
+    >getting started
+        >an existing local project
+            > use command "git init"
+            > use "git status" to see tracked folders
+            > use "git add" to track files
+                > create a .gitignore file and put in it untrackable file (like personal or preference files)
+            > use "git commit -m" to save the progress to a git version
+                > "git commit -m 'here you put a message specifiying the changes'"
+            > use "git log"
+                > display log of commits
+        >an existing remote project
+            > use "git clone <url> ."
+                > you might even clone a local repository
+                > the "dot" in the end of the command means clone all files to current directory
+            > view information of cloned remote repository
+                > use "git remote -v"
+                    > it list information to repository, including location and pushing url
+                > use "git branch -a"
+                    > it will list all branches locally and remotly
+                > push the changes
+                    > commit locally
+                    > pull remotly "git pull origin master"
+                        > to avoid overwriting others code 
+                    > push remotly "git push origing master"
+        >git stages  
+            > working directory
+                > Untracked and modified files
+            > Staging Area
+                > organize files to be commited
+            > .git directory
+                > the directory carrying files of a specific version
+        > common workflow
+            > create a branch for the desired feature
+                > "git branch <name>"
+                > "git branch" list the branches
+                > "git checkout <branch name>"
+                > "git push -u origin <branch name>" pusht the branch to the repository
+                > How to merge a branch
+                    > "git checkout master" switch to master branch
+                    > "git pull origin master" just to avoid overwriting
+                    > "git branch --merged" see merged branches
+                    > "git merge <branch name>" the real merging
+                    > "git branch --merged" to check if things are merged or network
+                > Delete a branch
+                    > "git branch -d <branch name>" delete a branch"
+                    > "git push <name of remote repository> --delete <branch name>" from remote
+                    
+        > version control branch
+            > a branch is a copy of the original code to try to implement a feature without messing up with others workflow, or without commiting to much
+
+Started at ~1:30
+-linux is pain, I just started and spent half my session on solving unnecessary problems, use windows folks, use windows ~2:00
+-I feel excited to work at company using local network, It looks cool ~3:20
+-this have taken far too long 4:35
