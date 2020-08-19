@@ -65,7 +65,7 @@ On the first Day I forgot to save the original diary
                 > Delete a branch
                     > "git branch -d <branch name>" delete a branch"
                     > "git push <name of remote repository> --delete <branch name>" from remote
-                    
+
         > version control branch
             > a branch is a copy of the original code to try to implement a feature without messing up with others workflow, or without commiting to much
 
@@ -73,3 +73,4 @@ Started at ~1:30
 -linux is pain, I just started and spent half my session on solving unnecessary problems, use windows folks, use windows ~2:00
 -I feel excited to work at company using local network, It looks cool ~3:20
 -this have taken far too long 4:35
+-so here I almost done my tutorial for today 5:10
