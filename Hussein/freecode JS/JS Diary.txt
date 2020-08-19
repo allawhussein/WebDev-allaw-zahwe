@@ -1,0 +1,40 @@
+Day 1 - it have been too long
+JavaScript
+--------------------------------------------------------------------------------------
+> Comments
+    > \\
+    > \* *\
+> Variables
+    > boolean
+    > string
+    > undefined
+    > null
+    > symbol
+    > bigint
+    > number
+    > object
+
+    > assigninig values
+    > addition
+    > substraction
+    > multiplication
+    > division
+    > operations shorthand
+
+    > Arrays
+        > ".push(x)" adds x to the end of array
+        > ".pop()" removes the last element and return it
+        > ".shift()" similar to pop() but for first element
+        > ".unshift(x)" "push(x)" but at the beginning
+
+    > functions
+        > "function <function-name>(<Variables>, ....){\\code}
+    
+    > scoop of Variables
+    
+    > If conditions
+
+    > Switch Statments
+
+- They are really easy bro
+- Ok I will surf basic ideas only and move on
