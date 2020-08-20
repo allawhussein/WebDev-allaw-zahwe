@@ -42,3 +42,4 @@ Day 1 - Identify where to start
 - Stopping for Praying 7:34
 - freecodecamp is case sensitive 10:44PM
 - Time to commit and move to javascript
+=========================================================================================================================Day 2 - 

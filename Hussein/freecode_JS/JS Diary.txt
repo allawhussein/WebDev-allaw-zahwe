@@ -38,3 +38,15 @@ JavaScript
 
 - They are really easy bro
 - Ok I will surf basic ideas only and move on
+=========================================================================================================================
+Day 2 - Still in Basic JavaScript
+> functions
+    > passing arguments
+> if conditions
+    > = assigninig
+    > == non-strict equal operator 3 == '3'
+    > === strict equal opertor 3 === 3 true, 3 === '3' false
+> JavaScript Objects
+    > similar to python dictionary
+
+- here I end, I want to go to the Imam Hussein - PBUH - flag raise cermony
