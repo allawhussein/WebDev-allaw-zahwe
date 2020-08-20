@@ -75,3 +75,18 @@ Started at ~1:30
 -this have taken far too long 4:35
 -so here I almost done my tutorial for today 5:10
 -I almost deleted this diary but GIT saved the day 5:33
+=========================================================================================================================
+Day 2 - Ruby First Day
+> First I will create a git branch to avoid multiple commits
+> Ok dozens of trouble
+> Ruby & Python are similiar (great to me)
+> The most important feature of ruby is "on rails" framework
+> https://launchschool.com/books/ruby/read/introduction 
+    > History
+    > Abstration idea
+    
+    > Ruby Installation
+
+- I feel excited for this course it seems great 2:41PM
+- I messed with a lot of things, and now Odin project tells me to not do anythings, well but you told me to follow those other guides 3:30PM
+- Here I am done 3:36PM
