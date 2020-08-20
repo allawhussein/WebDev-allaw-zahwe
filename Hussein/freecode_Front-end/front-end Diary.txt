@@ -42,4 +42,50 @@ Day 1 - Identify where to start
 - Stopping for Praying 7:34
 - freecodecamp is case sensitive 10:44PM
 - Time to commit and move to javascript
-=========================================================================================================================Day 2 - 
+=========================================================================================================================
+Day 2 - Still General Revision
+> CSS variables
+> Browser fallback
+> Media Query
+------------------------------------
+I am done with Basic CSS, now with 
+Day 2 - Applied Visual Design
+- This section is highly important and new
+- I enjoyed today's session
+
+> Visual Balance: text-align Property
+    > "text-align: justify|center|right|left;"
+        > center, will use same amount of spaces on both sides
+        > justify, will add spaces in between words so that they stretch to the boundaries
+        > left & right, are self-explantory
+
+    > "width: xyzpx|%|vh|wv"
+    > "height: xyzpx|%"
+    > "font-weight: bold|" <=> <strong>
+    > "text-decoration: underline" <=> <u>
+    > "font-style: italic;" <=> <em>
+    > "text-decoration: line-through;" <=> <s>
+    > hroizontal line <hr>
+    > "background-color: rgba(red, green, blue, opacity);"
+    > "font-size: xypx;"
+    > "box-shadow: <offset-x> <offset-y> <blur-radius> <sqread-radius> <color>;"
+    > "opacity: <number 0 to 1>;"
+    > "text-transform: lowercase|uppercase|capitalize|initial|inherit|none;"
+    > "line-height: <number px>;" the height of each individual line
+    > Hover State of Anchor Tag
+    > Relative Position
+        > this will let us move the element away from it's position without affecting other elements
+        > you may use "top: <number px>" to move element down by number
+        > set "position: relative;"
+        > other commands "bottom|left|right"
+    > Absolute Position
+        > the element is movable but the flow of CSS does not take it into consideration
+        > other things are similar to relative position
+    > Fixed Position
+        > similar to absolute, but uses browser border as reference
+        > fixed element won't move with scroll
+        > offset properties are relative to screen browser border
+    > float Property
+        > floated elements are removed from document flow
+        > floated elements are either pushed left or right
+    > z-index property
