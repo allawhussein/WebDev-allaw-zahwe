@@ -1,0 +1,166 @@
+Day - 1: Git 
+On the first Day I forgot to save the original diary
+>Basic Introduction
+>Basic Tutorial to Web Devleopment Terms
+
+>Git Tutorial
+    >how git is great (and I know that :>)
+    >basic git commands
+        >pull down remote repository
+            >git clone "url"
+        >workflow commands
+            >git add "file name.ext"
+            >git commit -m "commitement message"
+        >status commands
+            >git status
+            >git log
+    >git command layout
+        program | action | destination
+>Git Tutorial on https://www.youtube.com/watch?v=HVsySz-h9r4
+    >distributed vs. central control systems (git is VCS)
+    >git help command
+    >getting started
+        >an existing local project
+            > use command "git init"
+            > use "git status" to see tracked folders
+            > use "git add" to track files
+                > create a .gitignore file and put in it untrackable file (like personal or preference files)
+            > use "git commit -m" to save the progress to a git version
+                > "git commit -m 'here you put a message specifiying the changes'"
+            > use "git log"
+                > display log of commits
+        >an existing remote project
+            > use "git clone <url> ."
+                > you might even clone a local repository
+                > the "dot" in the end of the command means clone all files to current directory
+            > view information of cloned remote repository
+                > use "git remote -v"
+                    > it list information to repository, including location and pushing url
+                > use "git branch -a"
+                    > it will list all branches locally and remotly
+                > push the changes
+                    > commit locally
+                    > pull remotly "git pull origin master"
+                        > to avoid overwriting others code 
+                    > push remotly "git push origing master"
+        >git stages  
+            > working directory
+                > Untracked and modified files
+            > Staging Area
+                > organize files to be commited
+            > .git directory
+                > the directory carrying files of a specific version
+        > common workflow
+            > create a branch for the desired feature
+                > "git branch <name>"
+                > "git branch" list the branches
+                > "git checkout <branch name>"
+                > "git push -u origin <branch name>" pusht the branch to the repository
+                > How to merge a branch
+                    > "git checkout master" switch to master branch
+                    > "git pull origin master" just to avoid overwriting
+                    > "git branch --merged" see merged branches
+                    > "git merge <branch name>" the real merging
+                    > "git branch --merged" to check if things are merged or network
+                > Delete a branch
+                    > "git branch -d <branch name>" delete a branch"
+                    > "git push <name of remote repository> --delete <branch name>" from remote
+
+        > version control branch
+            > a branch is a copy of the original code to try to implement a feature without messing up with others workflow, or without commiting to much
+
+Started at ~1:30
+-linux is pain, I just started and spent half my session on solving unnecessary problems, use windows folks, use windows ~2:00
+-I feel excited to work at company using local network, It looks cool ~3:20
+-this have taken far too long 4:35
+-so here I almost done my tutorial for today 5:10
+-I almost deleted this diary but GIT saved the day 5:33
+=============================================================================================
+Day 2 - Ruby First Day
+> First I will create a git branch to avoid multiple commits
+> Ok dozens of trouble
+> Ruby & Python are similiar (great to me)
+> The most important feature of ruby is "on rails" framework
+> https://launchschool.com/books/ruby/read/introduction 
+    > History
+    > Abstration idea
+    
+    > Ruby Installation
+
+- I feel excited for this course it seems great 2:41PM
+- I messed with a lot of things, and now Odin project tells me to not do anythings, well but you told me to follow those other guides 3:30PM
+- Here I am done 3:36PM
+=============================================================================================
+Day 3 - Ruby Day Two
+> General non-useful arithmatics :)
+> ruby symbol
+    > ":my_symbol"
+> nil
+    > the same as null
+> variables are as Python
+    > constants are defined by all-captilized letters
+    > global are precseded by $ sign
+    > class variables are precseded by @@ signs
+    > instance variable declaration are preseded by @ sign
+    > local variable is defined by name only
+> in ruby, when a variable is assigned to another, it will get a pointer to it, not just a copy
+    > here: "name1=name2" name1 will hold name2 not only a copy of data at moment of assigning
+> taking input:
+    gets.chomp
+> scope of variables 
+    > local defined between {} or do/end
+    > global defined away form {} or do/end
+
+> output
+    > "print" displays output with "\n"
+    > "puts" as "print" wihtout "\n"
+
+> input
+    > "gets", returns the inputed string with "\n"
+    > "gets.chomp", returns the input without the "\n"
+    > tutorials point webpage "https://www.tutorialspoint.com/ruby/ruby_input_output.htm"
+        > "The class IO provides all the basic methods, such as read, write, gets, puts, readline, getc, and printf"
+            > "puts" simple output with auto newline
+            > "gets" a function returning user input including newline character
+            > "putc" instead of put-sting it will put-character
+            > "getc" similar to getc but takes one character only
+            > "print" similar to puts, but discardes the newline character
+
+            > there is some file opening and closing, but I am not interested yet
+
+> if condition
+    > similar to python, ended with "end" command word
+    > in ruby a single statement can be conditioned with "if" placed after it 
+    > "elsif" & "elese"
+    > "unless" command word
+        > it is a not if, easy
+> Case statement
+    > look at this code
+    {
+        grade = 'F'
+
+        did_i_pass = case grade
+            when 'A' then "hell yeah!"
+            when 'D' then "also hell yeah!"
+            else "McDonald's is hiring!
+        end
+    }
+    > here the text after "then" is assigned to "did_I_pass"
+    > or a more classical approach is 
+    {
+        grade = 'F'
+
+        case grade
+        when 'A'
+            puts "Hell Yeah!"
+            someotherfunction
+        When 'D'
+            puts "run"
+        else
+            puts "go to fast food delievery"
+    }
+
+> Ternary Operator
+    > similar to C/C++ "?" command, but I am not that much interested
+- I am getting sleepy, a lot I will end this session early on 3 PM 2:00Pm
+- Okay, I am going to commit, push and sleep 2:53PM
