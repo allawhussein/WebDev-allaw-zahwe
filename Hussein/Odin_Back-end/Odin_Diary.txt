@@ -164,3 +164,154 @@ Day 3 - Ruby Day Two
     > similar to C/C++ "?" command, but I am not that much interested
 - I am getting sleepy, a lot I will end this session early on 3 PM 2:00Pm
 - Okay, I am going to commit, push and sleep 2:53PM
+==========================================================================================
+Day 4 - Today I will finish (inshallah) basic ruby chapter
+
+> loops
+    > check ruby_three.rb
+
+> Arrays
+    > similar to python lists
+    > filling syntax
+        > code
+        {
+            Array.new #-> []
+            Array.new(3) #-> [nil, nil, nil]
+            Array.new(3, "hello") #-> ["hello", "hello", "hello"]
+            Array.new(3, Array.new) #-> [[], [], []] #I liked this one
+        }
+    > accessing elements
+        > <array_number>[<index_number>]
+        > code
+        {
+            str_array = ["hussein", "ali", "allaw"]
+
+            str_array.first #-> "hussein"
+            str_array.first(2) #-> ["hussien", "ali"]
+            str_array.last(2) #-> ["ali", "allaw"]
+        }
+    > adding or removing elements
+        > check day 2
+    > concating
+        > a.concat(b)
+        > a+b
+    > array methods
+        > [].empty? #-> true
+        > [[]].empty? #-> true 
+        > [1, 2, 3].reverse #-> [3, 2, 1]
+        > [1, 2, 3].include(3) #-> true
+        > [1, 2, 3].include(4) #-> true
+
+        > [1, 2, 3].join #-> "123"
+        > [1, 2, 3].join("-") #-> "1-2-3"
+    
+> Hashes
+    > basicly a python dictionary
+    > creating hashes
+        > code
+        {
+            my_hash = {
+                "my name" => "hussein",
+                "my average" => 70,
+                "quran suraa" => ["al-bakara", "Al-Omran"]
+            }
+        }
+    > further more check "ruby_three_hashes.rb"
+    > changing data
+        > simple as reassigning them
+    > Adding data
+        > or to define a new value use "your_hash["nwe key-value"] = "your new data""
+    > Removing data
+        > "your_hash.delete("key-value")
+        > code
+        {
+            shoes = {
+                "summer" => "sandals",
+                "winter" => "boots",
+                "fall" => "sneakers"
+            }
+            shoes.delete("summer") #=> "snadals"
+            shoes #=> {"winter" => "boots", "fall" => "sneakers"}
+        }
+
+        > Methods 
+            > code
+            {
+                books = {
+                    "adab al salat" => "panahian"
+                    "insan beomr 250 aam" => "al-sayed el-kaed"
+                }
+                books.keys #=> ["adab el salat", "insan beomr 250 aam"]
+                books.values #=> ["panahian", "al-sayed el-kaed"]
+            }
+        > Merging two hashes
+            > "hash1.merge(hash2)"
+            > be aware that for same keys, the value of hash2 is taken only
+        > Symbols as hash keys
+            > code
+            {
+                american_aircrafts = { #Rocket syntax
+                    :gruman => "F14"
+                    :McDouglas => "F16"
+                    :LockHeed => "F22"
+                }
+
+                american_helicopters = { #Symbols syntax
+                    comp1: "osprey"
+                    comp2: "apache"
+                    comp2: "chinook"
+                }
+            }
+            > however you can not use them to access the hash
+    > https://launchschool.com/books/ruby/read/hashes "launchschool hash guide
+        > this will be done mainly in irb only
+        > iterating over hashes
+            > code
+            {
+                # iterating_over_hashes.rb
+                person = {name: 'bob', height: '6 ft', weight: '160 lbs', hair: 'brown'}
+                person.each do |key, value|
+                    puts "Bob's #{key} is #{value}"
+                end
+            }
+        > when passing them as paremeters, hashes can be defined as optional, which is great
+            > code
+            {
+                # optional_parameters.rb
+
+                def greeting(name, options = {})
+                if options.empty?
+                    puts "Hi, my name is #{name}"
+                else
+                    puts "Hi, my name is #{name} and I'm #{options[:age]}" +
+                        " years old and I live in #{options[:city]}."
+                end
+                end
+
+                greeting("Bob")
+                greeting("Bob", {age: 62, city: "New York City"})
+            }
+        > hashes vs. Arrays
+            > hashes help labeling
+            > arrays help order things
+            > array help fifo or lifo
+        > hashes key data type
+            > put it simple it can be anythings
+        > "has_key?"
+            > to check if a key is available
+        > "select"
+            > "<hash_name>.select{ |k, v| k == <some_key_value>}
+            > "<hash_name>.select{ |k, v| (k == "Bob") || (v == 19)}
+        > fetch
+            > similar to normal access <hash_name>[:<key_value>], but does not return "nil" when not found
+        > to_a
+            > return array version of a hash
+        > keys & values
+            > <hash_name>.keys #=> return keys as array
+            > <hash_name>.values #=> return values as array
+- A website I will do nearly
+    - similar to "tesla cars" as front-end
+    - hosting on raspberry pain
+    - appling embbeded programming to send messages
+    - create another web app to print google location URL as QR code
+    - create data collector for further data analysis
