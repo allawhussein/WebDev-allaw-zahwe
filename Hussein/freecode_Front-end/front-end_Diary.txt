@@ -93,6 +93,7 @@ Day 2 - Applied Visual Design
 Day 4 - Applied Visual Design
 
 - Today I made an invisible navbar
+- after seeing the animation capability of CSS, I think making a game is no foreseen
 
 > change positin of overlapping elements
     > use "z-index"
@@ -101,4 +102,85 @@ Day 4 - Applied Visual Design
     > use "margin: auto"
 
 > complementary colors
-    
+    > the color wheel is based on hue and saturation
+        > red and cyan
+        > green and magenta
+        > blue and yellow
+
+        > color tables are 
+            > RGB computer screens
+            > CMY(K) printing cartidges
+            > RYB (basic physical colors)
+> Tertiary Colros
+    > combing two primary colors (R+B) creates a secondary color (magenta) that is complementary to the primary color not used to create that secondary (here magenta and green)
+    > instead of two complementary colors
+        > split-complement scheme
+            > base color + 2 adjacent to the complementary
+> Adjust the Hue of color
+    > see the website for full explanation
+
+> Adjust the tone of color
+
+> CSS Linear Gradient
+    > "linear-gradient(<gradient_direction>, <color1>, ...);"
+    > with repetition
+        > "repeating-linear-gradient(<gradient_direction, <color1> <number_of_px>, <color2>, <number_of_px>, ...)
+> pattern background
+    > set a small picture as background
+    > background support url()
+
+> CSS Transform 
+    > transfrom property with scale function
+    > "transform: scale(<ratio of scaling>);"
+        > this command will scale the size of the element
+    > skewX|skewY function 
+        > "transform: skewX(<angle_of_skew>deg);"
+        > this is not rotation, it will rotate the y-axis of the element while conserving the x-axis
+    > rotate 
+        > obvious
+
+> CSS graphic
+    > well, we did a tranparent shape with a colored shadow
+> Complex CSS graphics
+    > "::after" & "::before" pseduo-elements
+        > they should have the "content: ;" property
+
+> CSS @Keyframes
+    > used to animate elements
+    > we have 8 animation properties
+        > animation-name, which is used by @Keyframes
+        > animation-duration
+        > animation-iteration-count (it can be infinite)
+        > animation-timing-function
+            > have 4 values
+                > ease - default (slow-fast-slow)
+                > ease-out (fast-slow)
+                > ease-in (slow-fast)
+                > linear
+    > @Keyframes
+        > they set how animation goes on a 100 step interval
+        > code
+        {
+            #anim 
+            {
+                animation-name: colorful;
+                animation-duration: 3s;
+            }
+
+            @keyframes colorful 
+            {
+                0% {
+                    background-color: blue;
+                    }
+                100% {
+                    background-color: yellow;
+                    }
+            }
+        }
+        > you can prevent the animation from resetting
+            > "animation-fill-mode: forwards;" inside the CSS element not the Keyframe
+        > top, bottom, right, left properties can be animated for fixed and relative position
+    > Bezier Curves
+        > control animation timing better than animation-timing-function
+        > it sets 4 main points for animation-timing-function
+            > "animation-timing-function: cubic-bezier(<x1>, <y1>, <x2>, <y2>);"
