@@ -89,3 +89,16 @@ Day 2 - Applied Visual Design
         > floated elements are removed from document flow
         > floated elements are either pushed left or right
     > z-index property
+============================================================================================
+Day 4 - Applied Visual Design
+
+- Today I made an invisible navbar
+
+> change positin of overlapping elements
+    > use "z-index"
+        > higher values are shown first
+> horizontal center
+    > use "margin: auto"
+
+> complementary colors
+    

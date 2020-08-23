@@ -1,0 +1,62 @@
+/******************************Remove Initial Styling of body***********************/
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+/******************************The NavBar Styling**************************************/
+.navbar-div
+{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+.tansparent-navbar
+{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-ul
+{
+    text-decoration: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-li
+{
+    text-shadow: 2px 2px 5px black;
+    text-decoration: none;
+    float: left;
+    list-style-type: none;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.navbar-li:hover
+{
+    backdrop-filter: blur(20px);
+    text-shadow: none;
+    font-weight: bold;
+}
+/*********************************The Image Styling******************************/
+.fullscree-img-div
+{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.fullscreen-img
+{
+    object-fit: cover;
+    object-position: -20%;
+    width: 100%;
+    height: 100%;
+}
