@@ -166,7 +166,7 @@ Day 3 - Ruby Day Two
 - Okay, I am going to commit, push and sleep 2:53PM
 ==========================================================================================
 Day 4 - Today I will finish (inshallah) basic ruby chapter
-
+(well I did not)
 > loops
     > check ruby_three.rb
 
@@ -315,3 +315,130 @@ Day 4 - Today I will finish (inshallah) basic ruby chapter
     - appling embbeded programming to send messages
     - create another web app to print google location URL as QR code
     - create data collector for further data analysis
+
+=============================================================================================
+Day 5 - Today I will Try to finish these basics
+> Methods
+    > come on they are functions only
+    > well they are not, since they are object-related
+    > ruby methods are constructed as python
+    > they tell me they are not functions but then use them as function
+        > code
+        {
+            def para(name)
+                #some code logic
+            end
+
+            para("see called as a fucntion")
+        }
+    > oooooh, great stuff, default parameters 
+        > code
+        {
+            def para (name = "string")
+                #code logic
+            end
+        }
+    > ruby supports implicit return
+        > it does not require "return" statement, it will auto return last-evaluated statement
+    > some built-in methods
+        > strings
+            > .join("<joining thing>")
+            > .reverse() 
+                > reverse the order of list
+            > .capitilize()
+                > capitilizes the first letter of every word
+            > .downcase
+        > numbers
+            > .even?
+            > .odd?
+            > .between?(<number_1>, <number_2>)
+    > methods can be called without paranthesis, if the do not require arguments
+
+> Basic Enumerable Methods
+    > built-in methods as arrays and hashes (what is a hash?)
+    > they use curly brackets
+    > #select
+        > code without select
+        {
+            friends = ['Sharon', 'Leo', 'Leila', 'Brian', 'Arun']
+            invited_list = []
+
+            for friend in friends do
+                if friend != 'Brian'
+                invited_list.push(friend)
+                end
+            end
+
+            invited_list #=> ["Sharon", "Leo", "Leila", "Arun"]
+        }
+        > code with #select
+        {
+            friends = ["ali", "mohammad", "hussein", "jafaar"]
+
+            friends.select { |friend| friend != "hussein"}
+        }
+        > searching geeksforgeeks
+            > the #select will return the elements satifying the given condition
+    > what the hell is "|friend|"
+        > it is an iterator
+        > some methods like #each iterate through arrays, so |variable| server as the element the method is currently at
+    > #each
+        > #select returns a new list satifying the condition, however #each will not, unless programmed to so
+        > it is hashes freindly
+        > "array.each{|variable| <some_code>}
+        or
+        > code
+        {
+            array.each do |variable|
+                <some code>
+            end
+        }
+        > #each_with_index
+            > of course similar to #each
+            > instead of only iterating through objects, it keeps track of their index 
+            > "list.each_with_index { |variable, index| puts variable if index.even?}
+    > #map
+        > it is the destructive version of #each
+        > oh it is called #collect 
+        > "list.map { |variable| variable.<method>}
+    > #inject
+        > it turns this
+        {
+            my_numbers = [5, 6, 7, 8]
+            sum = 0
+
+            my_numbers.each { |number| sum += number }
+
+            sum
+        }
+        into this
+        {
+            my_numbers = [5, 6, 7, 8]
+
+            my_numbers.reduce { |sum, number| sum + number }
+        }
+        > "my_numbers.reduce(<initial_value>) { |sum, number| sum + number}
+        > I skipped the rest (which are litte)
+
+> Predicate Enumerable Methods
+    > what recognize it from normal enumerable is the boolian return
+    > they end by "?"
+    > #include?
+        > "<list>.include?(<target_value>)
+    > #any?
+        > return true if there exits an element in list which match the stated condition
+        > "<list>.any? { |variable| <condition>}"
+    > #all?
+        > instead of some elements like in #any?, it is all the elements
+        > "<list>.all? { |variable| <condition>}"
+    > #none?
+        > oppesite of #all?
+        > "<list>.none? { |variable| <condition}"
+
+> Debugging
+    > use "p" as it is "puts & #inspect"
+    > "#map" is not destructive, "#map!" is destructive
+    > using "pry"
+        > require 'pry'
+        > to form a break-point use "binding.pry"
+            > this will display variables
