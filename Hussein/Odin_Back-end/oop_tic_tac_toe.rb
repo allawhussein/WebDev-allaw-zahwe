@@ -12,6 +12,7 @@ class TicTacToe
     end
     def get_move(player)
         move = 9
+        puts "player #{player}"
         while move == 9
             move = gets.chomp
             if @game_status[move.to_i - 1] == move
@@ -77,7 +78,6 @@ while (winner == "none" and game.check_tie())
     game.draw_board()
     game.get_move(player)
     winner = game.check_winner(player)
-    puts "#{winner}"
     if winner == "none"
         player = game.toogle_player(player)
     end
