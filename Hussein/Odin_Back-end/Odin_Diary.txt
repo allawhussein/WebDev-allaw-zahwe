@@ -442,3 +442,122 @@ Day 5 - Today I will Try to finish these basics
         > require 'pry'
         > to form a break-point use "binding.pry"
             > this will display variables
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Chapter: OPP 
+=============================================================================================
+Day 6 - Introduction to OPP
+
+- I like codecademy style of introducing the ideas
+- Great I have finished the first part of codecademy class 8:30
+> class is declared by "class ClassName"
+> we can have modules as we need through "def module_name"
+> each class can have an instance
+    > each object instance have a variable-instance 
+        > "@variable"
+    > code
+    {
+        class SomeInstance
+            def init (var1, var2)
+                @var_a = var1
+                @var_b = var2
+            end
+        end
+    }
+> initialize an instance
+    > code
+    {
+        class SomeClass
+        ...
+
+        instance = SomeClass.new(<variables>, <variables>, ...)
+    }
+
+> Scoop of variable
+    > it is public vs. private variables
+        > there is 
+            > class variables
+                > this variable is shared among all class's instances
+            > instance variables
+                > this variable is exclusivly for the specified instance
+            > global variables
+                > can be declared out of anything
+                > can be declared by
+                    > "$<variable_name>"
+            > local variables
+> Inheritance
+    > child class takes methods and variables form parent
+    > syntax
+        > "class ChildClass < ParentClass"
+    > Overridding
+        > it is used to modify inherited methods
+        > overridding is simply
+            > code
+            {
+                class ParentClass
+                    def func 
+                        #some code
+                    end
+                end
+                class ChildClass < ParentClass
+                    def func
+                        #some other code
+                    end
+                end
+
+            
+            }
+        > we can still inherit original methods even if they are overridden
+            > basiclly you use function inside function
+            > by using "super(<arguments>)" inside child parent it calls the parent's module 
+            > Ruby have only 1 level of inhertiance not as C++
+                > however you can inherit from multiple classes >mixins<
+                > code
+                {
+                    class Creature
+                    ...
+                    class Person 
+                    ...
+
+                    class Dragon < Creature; end
+                    class Dragon < Person; end
+                }
+                > having same method name form two SuperClasses will yield a "superclass mismatch"
+> Accessing Class variables
+    > "def ClassName.<method_name>(arguments)"
+
+> Private & Public Methods
+    > declaration
+        > easy
+    > attributes
+        > we can read/write class or instance variables using these
+        > "attr_reader :<variable>"
+            > equivelant code
+            {
+                def func()
+                    variable
+                end
+            }
+        > "attr_writer :<variable>"
+            > equivelant code
+            {
+                def func (variable)
+                    @variable = variable
+            }
+        > "attr_accessor"
+> Module 
+    > it is a static function
+        > can not pass things to children
+        > can not have instances
+        > it is a tool box of methods or constants
+    > to access ruby modules
+        > <Module Name>::<constant or method>
+            > "::" is the scope resolution operator
+    > we can bring modules to irb or .rb
+        > require "<module name>"
+    > modules can be included in classes
+        > simply "include <module_name>"
+        > they are mixins
+        > they can form extends (but I did not get it)
+
+=============================================================================================
