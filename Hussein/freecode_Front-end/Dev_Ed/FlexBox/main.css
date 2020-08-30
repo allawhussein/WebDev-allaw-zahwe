@@ -1,0 +1,48 @@
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.parent
+{
+    height: 100vh;
+    border: 20px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.child1
+{
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    flex-grow: 2;
+}
+
+.child2
+{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    flex-grow: 1;
+}
+
+.child3
+{
+    width: 100px;
+    height: 100px;
+    background: lawngreen;
+}
+
+.child4
+{
+    width: 100px;
+    height: 100px;
+    background: yellow;
+}
+ 

@@ -1,0 +1,24 @@
+> in flex we have two axis
+    > main
+    > cross
+> the axis direction "flex-direction;"
+    > column
+    > row
+    > column-reverse
+    > column-reverse
+> to align content along main axis
+    > "justify-content: center|flex-start|flex-end|space-between|space-around|space-evenly;"
+> to align content along cross axis
+    > "align-items: stretch|center|...;"
+> usually flex will fit on the main axis unless wraped
+    > "flex-wrap: wrap|no-wrap|;"
+> to align grand-children items
+    > "align-items: basline";
+> flex items order
+    > all children have "order: 0;"
+    > the higher the order the latter the position
+> "flex-grow: <number>"
+    > it manages how elements grow based on the number, the higer the higher the cut
+> visit css tricks
+> you can have independent align for children
+    > "align-self: <value>;"
