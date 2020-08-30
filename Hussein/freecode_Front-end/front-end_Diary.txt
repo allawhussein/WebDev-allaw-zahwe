@@ -184,3 +184,88 @@ Day 4 - Applied Visual Design
         > control animation timing better than animation-timing-function
         > it sets 4 main points for animation-timing-function
             > "animation-timing-function: cubic-bezier(<x1>, <y1>, <x2>, <y2>);"
+
+=============================================================================================
+Day 5 - Applied Accessibility Challanges
+
+> "alt" attribute for "img" tag 
+> even through you can use "div" instead of anything, however using specific tags help Accessibility
+> I did not get the meaning of article vs section
+> nav, footer and header
+> "audio" tag
+    > supports "controls" attribute
+        > "controls" is a boolean attribute, it affect by presence or abscence
+    > we need to nest in it "source" tage
+        > it have "src" attribute
+        > it have "type" attribute
+> "figure" tag
+    > used to add a caption to visual element
+    > it can (and must) nest a "figcaption" tag
+        > simple tage just like "h" tag        
+> "label" tag along forms
+    > simply nest it inside the form
+    > nest the input inside italic
+    > add a "for" attribute with value equal to "id" attribute of input
+> Label for radio buttons
+    > other than "label" tag
+        > "fieldset" tag
+            > "legend" attribute
+> Accessibility Visibility by CSS
+    > we want to have content avialable only to impaired audience
+        > we can not use "display: none;" or "visibility: hidden;" or zeroing dimensions
+        > so we use "absolute" position
+        > push it to far far left of document
+        > put dimensions 1px by 1px
+> Contrast of text
+    > it is 1:1 for same color
+    > it is 21:1 for black vs. white
+    > W3 recommend a 4.5:1
+> "accesskey" attribute
+    > it is useful to keyboard only users
+    > using tab button will cycle through elements with higher "accesskey"
+---------------------------------------------------------------------------------------------
+Day 5 - Responsive Web Desing Principles
+
+> Media Queries
+    > syntax
+        > "@media (condition){<CSS Rules>}
+
+> Responsive Images
+    > I have enough experince :p
+
+> Retina Images
+---------------------------------------------------------------------------------------------
+Day 5- FlexBox
+> justifying content
+    > common method
+        > "justify-content: center;"
+            > "flex-start: <some_trait>;" it can be top or left, ...
+            > "flex-end: <some_other_trait>;" 
+            > "space-between: " align items to the center of the main axis, with extra spaces between items
+            > "space-around: " similar to "space-between" but edge elements are not glued
+            > "space-evenly
+> Aligning Items 
+    > "justify-content" align items along flex axis
+    > "align-items" align items along flex cross axis
+> for reference: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+> flexbox wrap
+    > "flex-wrap: ;"
+        > "nowrap"
+        > "wrap"
+        > "wrap-reverse"
+> flex-shrink
+    > it is used to allow child flexes to shrink if fit in small parents
+    > the value is arbitrary, the higher the shrinker
+> flex-grow
+    > it is flex-shring on reverse
+> flex-basis
+    > it determines the initial size of item before shrinking or expanding
+> flex shortcuts
+    > I do not care
+> "order" property
+    > to re-arrange the items
+> "align-self"
+    > align individual items, this property will override the align-items
+Day 5 - Applied Accessibility Challanges & Responsive Web Desing Principles & FlexBox
+=============================================================================================
+Day 6 - CSS Grid
