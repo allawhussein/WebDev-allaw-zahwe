@@ -1,0 +1,5 @@
+> it complements flex
+    > help with complicated designs
+
+> instead of written divs as columns and rows
+    > we lay a grid all over the page, and we define how much an element cover
