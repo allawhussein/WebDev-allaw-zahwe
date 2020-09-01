@@ -1,0 +1,2 @@
+First line: first output
+text add by 1 line syntax

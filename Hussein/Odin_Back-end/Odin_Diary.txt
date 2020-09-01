@@ -566,3 +566,53 @@ Day 7 - OOP Project - Tic Tac Toe
 > No it is not
 > Mastermind
 Day 7 - OOP Project
+=============================================================================================
+Day 8 - Files & Serialization
+> The IO class 
+    > in I/O class we have I/O streams
+        > mainly the std ones
+        > but we can overwite them
+        > $stdout.puts "some string"
+    > to create a new object we need a file descripter
+        > 1 stands for stdout
+    > to get the file descriptor we use the method sysopen
+        > "f_desc = IO.sysopen("stream location", "<stream mode>")
+        > then we can use the "IO.new(f_desc)"
+    > we have a "black-hole" I/O stream called "null"
+        > located in "/dev/null"
+        > it returns "nil" for input
+    > all changes in I/O are not saved until the stream is closed
+    > attempting to change closed stream will raise "IOError"
+
+    > "file.pos"
+        > it will return the number of characters read
+    > "file.eof?"
+        > it will return true when reach the end of file
+    > "file.rewind"
+        > return the cursor to the beginning of the file
+    > "io.puts"
+        > not destructive
+        > output arguments to the stream
+
+    > SubClasses
+        > files
+        > sockets
+        > string_io
+        > tempfile
+        > disparate APIs
+> Serialization 
+    > the problem raise when we need to transfer data like arrays and structures
+    > we may use JSON (hey telegram used it)
+    > YAML
+    > XML
+> Serializing and Deserializing objects
+    > choose
+        > YAML for human readability and small data size
+        > JSON for less human readability and fast speed 
+        > Marshel for High speeed
+    > check serializer.rb for code
+=============================================================================================
+Day 8 - file I/O 
+> check file.rb for code
+> File.open vs. open
+    similar to $stdout.puts and puts
