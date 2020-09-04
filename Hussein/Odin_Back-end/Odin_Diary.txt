@@ -616,3 +616,11 @@ Day 8 - file I/O
 > check file.rb for code
 > File.open vs. open
     similar to $stdout.puts and puts
+=============================================================================================
+Day 9 - event_manger
+Day 10 - event_manger
+Day 11- event_manger
+> so here we have erb to provide document templates
+> ERB 
+    > first we initialize it with a given formatted string (or document)
+    > "binding"

@@ -34,18 +34,21 @@ end
 
 puts "EventManager Initialized"
 
-template_letter = File.read "form_letter.html"
+template_letter = File.read "../form_letter.html"
 contents = CSV.open "../event_attendees.csv", headers: true, header_converters: :symbol
 
 contents.each do |row|
     name = row[:first_name]
-  
+    personlized_letter = File.open "../personlized_letter.html", "w"
     zipcode = clean_zipcode(row[:zipcode])
-  
+    puts "cleaned zipcodes"
     legislators = legislators_by_zipcode(zipcode)
-  
+    puts "gotten legislators"
     personal_letter = template_letter.gsub('FIRST_NAME',name)
     personal_letter.gsub!('LEGISLATORS',legislators)
   
-    puts personal_letter
-  end
+    puts "personal letter writtern"
+    personlized_letter.write "#{personal_letter}"
+    puts "voter #{name} is completed"
+    personlized_letter.close
+end
