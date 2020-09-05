@@ -121,25 +121,3 @@ class LinkedList
         end
     end     
 end
-
-my_list = LinkedList.new
-my_list.append (10)
-my_list.append (30)
-my_list.append (40)
-my_list.append (50)
-my_list.prepend (1)
-my_list.remove_at(5)
-my_list.remove_at(0)
-my_list.insert_at(20, 2)
-my_list.insert_at(100, 10)
-
-puts "#{my_list.size}"
-puts "#{my_list.at(2).value}"
-puts "#{my_list.contains? 20}"
-puts "#{my_list.contains? 50}"
-puts "#{my_list.find(40)}"
-puts "#{my_list.find(23)}"
-puts "#{my_list.to_s}"
-puts "#{my_list.head.value}"
-puts "#{my_list.tail.value}\n\n"
-p my_list
