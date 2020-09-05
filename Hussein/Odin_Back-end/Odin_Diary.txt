@@ -624,3 +624,14 @@ Day 11- event_manger
 > ERB 
     > first we initialize it with a given formatted string (or document)
     > "binding"
+> Hangman Game
+=============================================================================================
+Day 12 - Introduction to CS 
+> intution of algorithims and complexity
+> Data Structures
+    > Stack
+        > similar to book stack, it FIFO, stacks are not indexed
+    > Queues
+        > LIFO stack, also not indexed
+=============================================================================================
+Day 13 - Project Linked Lists
