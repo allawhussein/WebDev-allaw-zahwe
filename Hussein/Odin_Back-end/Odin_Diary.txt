@@ -635,3 +635,8 @@ Day 12 - Introduction to CS
         > LIFO stack, also not indexed
 =============================================================================================
 Day 13 - Project Linked Lists
+> linked list a pair
+    > first value containes data
+    > second data containers pointer to other pair
+    > the last element points to nil
+    > the list is defined by header pointer, of course point to the first element
