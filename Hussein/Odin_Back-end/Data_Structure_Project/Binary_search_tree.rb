@@ -22,13 +22,11 @@ end
 
 class BinaryTree
     attr_reader :root
-    def initialize (array, array_length = nil)
-        @root = build_tree(array, array_length)
+    def initialize (array)
+        @root = build_tree(array)
     end
-    def build_tree (array, array_length)
-        if array_length == nil
-            array_length = array.length 
-        end
+    def build_tree (array)
+        array_length = array.length 
         if array_length == 1
             temp = BinaryNode.new(array[0])
         else
