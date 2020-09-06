@@ -21,10 +21,22 @@ class BinaryTree
         if array_length == 1
             temp = BinaryNode.new(array[0])
         else
-            temp = BinaryNode.new(
-                array[array_length/2], 
-                build_tree(array.take(array_length/2)), 
-                build_tree(array.drop(array_length/2+1).delete(array[array_length/2]))
+            value = array[array_length/2]
+            left_node = array.take(array_length/2)
+            right_node = array.drop(array_length/2 + 1)
+
+            if left_node.empty?
+                left_node = nil
+            else
+                left_node = build_tree left_node
+            end
+            if right_node.empty?
+                right_node = nil
+            else
+                right_node = build_tree right_node
+            end
+
+            temp = BinaryNode.new(value, left_node, right_node)
         end
     end
     def PreOrder(node = @root)
@@ -35,5 +47,14 @@ class BinaryTree
         PreOrder (node.left_node)
         PreOrder (node.right_node)
     end
-        
 end
+
+tree_1 = BinaryTree.new([1])
+tree_2 = BinaryTree.new([1, 2])
+tree_3 = BinaryTree.new([1, 2, 3])
+tree_4 = BinaryTree.new([1, 2, 3, 4])
+
+puts "#{tree_1.PreOrder}"
+puts "\n#{tree_2.PreOrder}"
+puts "\n#{tree_3.PreOrder}"
+puts "\n#{tree_4.PreOrder}"
