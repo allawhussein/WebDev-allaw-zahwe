@@ -23,8 +23,8 @@ class BinaryTree
         else
             temp = BinaryNode.new(
                 array[array_length/2], 
-                build_tree(array[0..array_length/2 - 1], array_length/2), 
-                build_tree(array[array_length/2 + 1, array_length], array_length/2))
+                build_tree(array.take(array_length/2)), 
+                build_tree(array.drop(array_length/2+1).delete(array[array_length/2]))
         end
     end
     def PreOrder(node = @root)
