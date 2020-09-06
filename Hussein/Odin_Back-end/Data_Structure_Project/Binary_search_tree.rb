@@ -8,4 +8,14 @@ class BinaryNode
         @left_node = nil
         @right_node = nil
     end
+    def comaparable (node)
+        begin
+            if @value > node
+                return true
+            end
+            return false
+        rescue
+            nil
+        end
+    end
 end
