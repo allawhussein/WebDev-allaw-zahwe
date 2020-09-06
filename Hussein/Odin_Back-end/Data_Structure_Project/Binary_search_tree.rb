@@ -19,3 +19,12 @@ class BinaryNode
         end
     end
 end
+
+class BinaryTree
+    def initialize (array, array_length = nil)
+        if array_length == nil
+            array_length = array.length 
+        end
+
+    
+end
