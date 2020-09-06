@@ -8,16 +8,6 @@ class BinaryNode
         @left_node = left_node
         @right_node = right_node
     end
-    def comaparable (node)
-        begin
-            if @value > node
-                return true
-            end
-            return false
-        rescue
-            nil
-        end
-    end
 end
 
 class BinaryTree
@@ -27,6 +17,7 @@ class BinaryTree
     end
     def build_tree (array)
         array_length = array.length 
+        
         if array_length == 1
             temp = BinaryNode.new(array[0])
         else
