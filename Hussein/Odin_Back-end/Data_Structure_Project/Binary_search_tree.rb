@@ -21,6 +21,7 @@ class BinaryNode
 end
 
 class BinaryTree
+    attr_reader :root
     def initialize (array, array_length = nil)
         @root = build_tree(array, array_length)
     end
@@ -32,4 +33,4 @@ class BinaryTree
     end
 end
 
-p "#{BinaryTree.new([1, 2, 3, 4, 5], 5)}"
+p "#{temp=BinaryTree.new([1,2,3,4,5], 5).root.left_node}"
