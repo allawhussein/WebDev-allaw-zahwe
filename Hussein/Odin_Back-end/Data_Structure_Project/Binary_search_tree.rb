@@ -29,8 +29,22 @@ class BinaryTree
         if array_length == nil
             array_length = array.length 
         end
-        temp = BinaryNode.new(array[array_length/2], array[0..array_length/2 - 1], array[array_length/2 + 1, array_length])
+        if array_length == 1
+            temp = BinaryNode.new(array[0])
+        else
+            temp = BinaryNode.new(
+                array[array_length/2], 
+                build_tree(array[0..array_length/2 - 1], array_length/2), 
+                build_tree(array[array_length/2 + 1, array_length], array_length/2))
+        end
     end
+    def PreOrder(node = @root)
+        if node == nil
+            return nil
+        end
+        puts "#{node.value}"
+        PreOrder (node.left_node)
+        PreOrder (node.right_node)
+    end
+        
 end
-
-p "#{temp=BinaryTree.new([1,2,3,4,5], 5).root.left_node}"
