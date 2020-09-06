@@ -3,10 +3,10 @@ class BinaryNode
     attr_accessor :left_node
     attr_accessor :right_node
 
-    def initialize (value = nil)
+    def initialize (value = nil, left_node = nil, right_node = nil)
         @value = value
-        @left_node = nil
-        @right_node = nil
+        @left_node = left_node
+        @right_node = right_node
     end
     def comaparable (node)
         begin
@@ -22,9 +22,12 @@ end
 
 class BinaryTree
     def initialize (array, array_length = nil)
+        @root = build_tree(array, array_length)
+    end
+    def build_tree (array, array_length)
         if array_length == nil
             array_length = array.length 
         end
-
-    
+        temp = BinaryNode.new(array[array_length/2], array[0..array_length/2] - 1, array[array_length/2 + 1, array_length])
+    end
 end
