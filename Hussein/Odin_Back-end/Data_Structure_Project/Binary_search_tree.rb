@@ -31,3 +31,5 @@ class BinaryTree
         temp = BinaryNode.new(array[array_length/2], array[0..array_length/2] - 1, array[array_length/2 + 1, array_length])
     end
 end
+
+puts "#{BinaryTree.new([1, 2, 3, 4, 5], 5)}"
