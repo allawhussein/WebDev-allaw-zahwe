@@ -39,6 +39,28 @@ class BinaryTree
             temp = BinaryNode.new(value, left_node, right_node)
         end
     end
+    def insert (value, node = @root)
+        if value == node.value
+            puts "duplicate now at #{node.value}"
+            return nil
+        elsif value > node.value
+            if node.right_node == nil
+                puts "inserted node at right now at #{node.value}"
+                node.right_node = BinaryNode.new(value)
+            else
+                puts "going right now at #{node.value}"
+                insert value, node.right_node
+            end
+        else
+            if node.left_node == nil
+                puts "inserted node at left now at #{node.value}"
+                node.left_node = BinaryTree.new(value)
+            else
+                puts "going left now at #{node.value}"
+                insert value, node.left_node
+            end
+        end
+    end
     def PreOrder(node = @root)
         if node == nil
             return nil
@@ -52,9 +74,15 @@ end
 tree_1 = BinaryTree.new([1])
 tree_2 = BinaryTree.new([1, 2])
 tree_3 = BinaryTree.new([1, 2, 3])
-tree_4 = BinaryTree.new([1, 2, 3, 4])
+tree_4 = BinaryTree.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+puts "\n#{tree_4.PreOrder}"
 
-puts "#{tree_1.PreOrder}"
-puts "\n#{tree_2.PreOrder}"
-puts "\n#{tree_3.PreOrder}"
+tree_4.insert 11
+tree_4.insert 11
+tree_4.insert 12
+tree_4.insert 13
+tree_4.insert 14
+#puts "#{tree_1.PreOrder}"
+#puts "\n#{tree_2.PreOrder}"
+#puts "\n#{tree_3.PreOrder}"
 puts "\n#{tree_4.PreOrder}"
