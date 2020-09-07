@@ -56,18 +56,23 @@ class BinaryTree
             end
         end
     end
-    def PreOrder(node = @root)
+    def PreOrder(node = @root, debug = 'no')
         if node == nil
             return nil
         end
-        puts "#{node.value}"
+        if debug == 'yes'
+            puts "#{node.value}"
+            puts "going left for #{node.value}"
+        end
         PreOrder (node.left_node)
+        if debug == 'yes'
+            puts "going right for #{node.value}"
+        end
         PreOrder (node.right_node)
     end
 end
 
 tree_4 = BinaryTree.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-puts "\n#{tree_4.PreOrder}"
 
 tree_4.insert 11
 tree_4.insert 11
@@ -75,3 +80,5 @@ tree_4.insert 12
 tree_4.insert 13
 tree_4.insert 14
 puts "\n#{tree_4.PreOrder}"
+
+puts "#{tree_4.delete 11}"
