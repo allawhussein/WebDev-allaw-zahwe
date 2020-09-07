@@ -56,6 +56,24 @@ class BinaryTree
             end
         end
     end
+    def delete (value)
+        temp = @root
+        sup_node = temp
+        while temp.value != value
+            puts "currently at #{temp.value}"
+            if temp.value > value
+                temp = temp.left_node
+                puts "going left"
+            elsif temp.value < value
+                temp = temp.right_node
+                puts "going right"
+            end
+            target_node = temp
+            puts "target_node: #{target_node.value}"
+        end
+        
+
+    end
     def PreOrder(node = @root, debug = 'no')
         if node == nil
             return nil
