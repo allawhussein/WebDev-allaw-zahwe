@@ -72,7 +72,36 @@ class BinaryTree
             puts "target_node: #{target_node.value}"
         end
         
+        if target_node.right_node == nil
+            if target_node.left_node == nil
+                target_node = nil
+            else
+                temp_node = target_node.left_node
+                target_node.left_node = nil
+                target_node = temp_node
+            end
+        else
+            target_node_right = target_node.right_node
+            last_left_node = target_node_right
+            while last_left_node.left_node != nil
+                last_left_node = last_left_node.left_node
+            end
+            if last_left_node.right_node == nil
+                target_node.value = last_left_node.value
+                last_left_node = nil
+            else
+                last_left_parent_node = target_node_right
+                while last_left_parent_node.left_node != last_left_node
+                    last_left_parent_node == last_left_parent_node.left_node
+                end
+                #some chaos going on here
+                last_left_parent_node.right_node = last_left_node.right
+                last_left_parent_node.left_node = nil
 
+                target_node.value = last_left_node.value
+                last_left_node = nil
+            end
+        end
     end
     def PreOrder(node = @root, debug = 'no')
         if node == nil
