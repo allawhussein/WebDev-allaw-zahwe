@@ -73,7 +73,10 @@ class BinaryTree
         end
         
         if target_node.right_node == nil
+            puts "right node is nil"
             if target_node.left_node == nil
+                puts "left node is nil"
+                puts "deleting node"
                 target_node = nil
             else
                 temp_node = target_node.left_node
@@ -103,18 +106,14 @@ class BinaryTree
             end
         end
     end
-    def PreOrder(node = @root, debug = 'no')
+    def PreOrder(node = @root)
         if node == nil
             return nil
         end
-        if debug == 'yes'
-            puts "#{node.value}"
-            puts "going left for #{node.value}"
-        end
+        puts "#{node.value}"
+        puts "going left for #{node.value}"
         PreOrder (node.left_node)
-        if debug == 'yes'
-            puts "going right for #{node.value}"
-        end
+        puts "going right for #{node.value}"
         PreOrder (node.right_node)
     end
 end
@@ -128,4 +127,6 @@ tree_4.insert 13
 tree_4.insert 14
 puts "\n#{tree_4.PreOrder}"
 
-puts "#{tree_4.delete 11}"
+tree_4.delete 1
+
+puts "\n#{tree_4.PreOrder}"
