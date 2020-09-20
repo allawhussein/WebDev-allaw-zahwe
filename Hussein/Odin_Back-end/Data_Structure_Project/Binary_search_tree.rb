@@ -3,10 +3,11 @@ class BinaryNode
     attr_accessor :left_node
     attr_accessor :right_node
 
-    def initialize (value = nil, left_node = nil, right_node = nil)
+    def initialize (value = nil, left_node = nil, right_node = nil, ancestor = nil)
         @value = value
         @left_node = left_node
         @right_node = right_node
+	@ancestor = ancestor
     end
 end
 
