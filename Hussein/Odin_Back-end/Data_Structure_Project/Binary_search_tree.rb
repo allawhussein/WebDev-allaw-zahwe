@@ -7,7 +7,7 @@ class BinaryNode
         @value = value
         @left_node = left_node
         @right_node = right_node
-	@ancestor = ancestor
+	    @ancestor = ancestor
     end
 end
 
@@ -16,7 +16,7 @@ class BinaryTree
     def initialize (array)
         @root = build_tree(array)
     end
-    def build_tree (array)
+    def build_tree (array, ancestor = nil)
         array_length = array.length 
         
         if array_length == 1
@@ -38,6 +38,12 @@ class BinaryTree
             end
 
             temp = BinaryNode.new(value, left_node, right_node)
+            if left_node != nil
+                temp.left_node.ancestor = temp
+            end
+            if right_node != nil
+                temp.right_node.ancestor = temp
+            end
         end
     end
     def insert (value, node = @root)
@@ -112,6 +118,7 @@ class BinaryTree
             return nil
         end
         puts "#{node.value}"
+        puts "the ancestor value is #{node.ancestor.value}"
         puts "going left for #{node.value}"
         PreOrder (node.left_node)
         puts "going right for #{node.value}"
@@ -121,6 +128,7 @@ end
 
 tree_4 = BinaryTree.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
+puts "\n#{tree_4.PreOrder}"
 tree_4.insert 11
 tree_4.insert 11
 tree_4.insert 12
