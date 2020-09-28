@@ -80,15 +80,3 @@ class BinaryTree
 end
 
 tree_4 = BinaryTree.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-
-puts "\n#{tree_4.PreOrder}"
-tree_4.insert 11
-tree_4.insert 11
-tree_4.insert 12
-tree_4.insert 13
-tree_4.insert 14
-puts "\n#{tree_4.PreOrder}"
-
-tree_4.delete 1
-
-puts "\n#{tree_4.PreOrder}"
