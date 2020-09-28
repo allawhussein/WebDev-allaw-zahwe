@@ -53,13 +53,13 @@ class BinaryTree
             return nil
         elsif value > node.value
             if node.right_node == nil
-                node.right_node = BinaryNode.new(value)
+                node.right_node = BinaryNode.new(value,nil , nil, node)
             else
                 insert value, node.right_node
             end
         else
             if node.left_node == nil
-                node.left_node = BinaryTree.new(value)
+                node.left_node = BinaryTree.new(value,nil , nil, node)
             else
                 insert value, node.left_node
             end
@@ -84,4 +84,5 @@ class BinaryTree
 end
 
 tree_4 = BinaryTree.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+tree_4.insert(11)
 tree_4.PreOrder
