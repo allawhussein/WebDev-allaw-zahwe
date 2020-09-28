@@ -64,54 +64,7 @@ class BinaryTree
         end
     end
     def delete (value)
-        temp = @root
-        sup_node = temp
-        while temp.value != value
-            puts "currently at #{temp.value}"
-            if temp.value > value
-                temp = temp.left_node
-                puts "going left"
-            elsif temp.value < value
-                temp = temp.right_node
-                puts "going right"
-            end
-            target_node = temp
-            puts "target_node: #{target_node.value}"
-        end
         
-        if target_node.right_node == nil
-            puts "right node is nil"
-            if target_node.left_node == nil
-                puts "left node is nil"
-                puts "deleting node"
-                target_node = nil
-            else
-                temp_node = target_node.left_node
-                target_node.left_node = nil
-                target_node = temp_node
-            end
-        else
-            target_node_right = target_node.right_node
-            last_left_node = target_node_right
-            while last_left_node.left_node != nil
-                last_left_node = last_left_node.left_node
-            end
-            if last_left_node.right_node == nil
-                target_node.value = last_left_node.value
-                last_left_node = nil
-            else
-                last_left_parent_node = target_node_right
-                while last_left_parent_node.left_node != last_left_node
-                    last_left_parent_node == last_left_parent_node.left_node
-                end
-                #some chaos going on here
-                last_left_parent_node.right_node = last_left_node.right
-                last_left_parent_node.left_node = nil
-
-                target_node.value = last_left_node.value
-                last_left_node = nil
-            end
-        end
     end
     def PreOrder(node = @root)
         if node == nil
